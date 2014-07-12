@@ -4,7 +4,7 @@
 
 Hubot script that requests pass/fail images from a [Flubr app](https://github.com/okize/flubr) instance in response to build states
 
-# Configuration
+## Configuration
 
 Use following env variables:
 
