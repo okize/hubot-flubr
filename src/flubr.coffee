@@ -11,7 +11,7 @@
 #   None
 #
 # Notes
-#   None
+#   Flubr app can be installed from https://github.com/okize/flubr
 #
 # Author:
 #   Morgan Wigmanich <okize123@gmail.com> (https://github.com/okize)
