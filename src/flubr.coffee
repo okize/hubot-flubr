@@ -17,7 +17,7 @@
 #   Morgan Wigmanich <okize123@gmail.com> (https://github.com/okize)
 
 getImage = (msg, type) ->
-  msg.http("#{process.env.HUBOT_FLUBR_URL}/images/#{type}")
+  msg.http("#{process.env.HUBOT_FLUBR_URL}/api/images/random/#{type}")
     .get() (err, res, body) ->
       msg.send body
 
