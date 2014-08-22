@@ -1,4 +1,7 @@
-[![NPM version](https://badge.fury.io/js/hubot-flubr.png)](http://badge.fury.io/js/hubot-flubr) [![NPM version](https://david-dm.org/okize/hubot-flubr.png)](https://david-dm.org/okize/hubot-flubr) [![Build Status](https://secure.travis-ci.org/okize/hubot-flubr.png)](http://travis-ci.org/okize/hubot-flubr)
+[![NPM version](http://img.shields.io/npm/v/hubot-flubr.svg?style=flat)](https://www.npmjs.org/package/hubot-flubr)
+[![Build Status](http://img.shields.io/travis/okize/hubot-flubr.svg?style=flat)](https://travis-ci.org/okize/hubot-flubr)
+[![Dependency Status](http://img.shields.io/david/okize/hubot-flubr.svg?style=flat)](https://david-dm.org/okize/hubot-flubr)
+[![Downloads](http://img.shields.io/npm/dm/hubot-flubr.svg?style=flat)](https://www.npmjs.org/package/hubot-flubr)
 
 # Hubot: Flubr
 
