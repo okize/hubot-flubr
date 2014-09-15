@@ -12,6 +12,8 @@ Hubot script that requests pass/fail images from a [Flubr app](https://github.co
 Use following env variables:
 
 ``HUBOT_FLUBR_URL`` url of a deployed instance of a [Flubr app](https://github.com/okize/flubr)
+``HUBOT_FLUBR_PASS`` regexp, defines PASS image trigger phrase
+``HUBOT_FLUBR_FAIL`` regexp, defines FAIL image trigger phrase
 
 ## Installation
 
