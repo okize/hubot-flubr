@@ -4,19 +4,25 @@ chai.use require 'sinon-chai'
 
 expect = chai.expect
 
-describe 'Flubr:', ->
-  flubr_module = require('../src/flubr')
+describe 'hubot-flubr', ->
+
+  PASS = 'build passed'
+  FAIL = 'build failed'
 
   beforeEach ->
+    process.env.HUBOT_FLUBR_URL = 'http://example.com'
+    process.env.HUBOT_FLUBR_PASS = PASS
+    process.env.HUBOT_FLUBR_FAIL = FAIL
     @robot =
       respond: sinon.spy()
       hear: sinon.spy()
     @msg =
       send: sinon.spy()
       random: sinon.spy()
-    @flubr_module = flubr_module(@robot)
+    @flubr_module = require('../src/flubr')(@robot)
 
-  describe 'summon a business cat', ->
+  it 'registers a hear listener', ->
+    expect(@robot.hear).to.have.been.calledWith(new RegExp PASS)
 
-    it 'should register a hear listener', ->
-      expect(@robot.hear).to.have.been.calledWith(/we should create a strategic partnership/)
+  it 'registers a hear listener', ->
+    expect(@robot.hear).to.have.been.calledWith(new RegExp FAIL)
