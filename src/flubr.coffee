@@ -16,6 +16,9 @@
 # Author:
 #   Morgan Wigmanich <okize123@gmail.com> (https://github.com/okize)
 
+PASS = new RegExp(process.env.HUBOT_FLUBR_PASS, 'g')
+FAIL = new RegExp(process.env.HUBOT_FLUBR_FAIL, 'g')
+
 getImage = (msg, type) ->
   msg.http("#{process.env.HUBOT_FLUBR_URL}/api/images/random/#{type}")
     .get() (err, res, body) ->
@@ -23,10 +26,8 @@ getImage = (msg, type) ->
 
 module.exports = (robot) ->
 
-  robot.hear /Build (PASSED|FAILED)/, (msg) ->
+  robot.hear PASS, (msg) ->
+    getImage msg, 'pass'
 
-    if msg.match[1] == 'PASSED'
-      getImage msg, 'pass'
-
-    if msg.match[1] == 'FAILED'
-      getImage msg, 'fail'
+  robot.hear FAIL, (msg) ->
+    getImage msg, 'fail'
