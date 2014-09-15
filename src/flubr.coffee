@@ -5,7 +5,9 @@
 #   None
 #
 # Configuration:
-#   HUBOT_FLUBR_URL     URL of a Flubr app instance
+#   HUBOT_FLUBR_URL     url of a deployed instance of a Flubr app
+#   HUBOT_FLUBR_PASS    regexp, defines PASS image trigger phrase
+#   HUBOT_FLUBR_FAIL    regexp, defines FAIL image trigger phrase
 #
 # Commands:
 #   None
