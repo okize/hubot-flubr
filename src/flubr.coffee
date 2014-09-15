@@ -28,14 +28,9 @@ getImage = (msg, type) ->
 
 module.exports = (robot) ->
 
-  if not process.env.HUBOT_FLUBR_URL
-    robot.logger.warning 'The HUBOT_FLUBR_URL environment variable not set'
-
-  if not process.env.HUBOT_FLUBR_PASS
-    robot.logger.warning 'The HUBOT_FLUBR_PASS environment variable not set'
-
-  if not process.env.HUBOT_FLUBR_FAIL
-    robot.logger.warning 'The HUBOT_FLUBR_FAIL environment variable not set'
+  robot.logger.warning 'HUBOT_FLUBR_URL not set' unless process.env.HUBOT_FLUBR_URL?
+  robot.logger.warning 'HUBOT_FLUBR_PASS not set' unless process.env.HUBOT_FLUBR_PASS?
+  robot.logger.warning 'HUBOT_FLUBR_FAIL not set' unless process.env.HUBOT_FLUBR_FAIL?
 
   robot.hear PASS, (msg) ->
     getImage msg, 'pass'
