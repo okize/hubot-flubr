@@ -9,20 +9,18 @@ Hubot script that requests pass/fail images from a [Flubr app](https://github.co
 
 ## Configuration
 
-Use following env variables:
-
-``HUBOT_FLUBR_URL`` url of a deployed instance of a [Flubr app](https://github.com/okize/flubr)
-
-``HUBOT_FLUBR_PASS`` regexp, defines PASS image trigger phrase
-
-``HUBOT_FLUBR_FAIL`` regexp, defines FAIL image trigger phrase
+ENV variable | Description
+--- | ---
+``HUBOT_FLUBR_URL`` | string; url of a deployed instance of a [Flubr app](https://github.com/okize/flubr)
+``HUBOT_FLUBR_PASS`` | regexp; defines PASS image trigger phrase
+``HUBOT_FLUBR_FAIL`` | regexp; defines FAIL image trigger phrase
 
 ## Installation
 
 Run the following command to install this module as a Hubot dependency
 
-```
-$ npm install hubot-flubr --save
+```bash
+npm install hubot-flubr --save
 ```
 
 Confirm that `hubot-flubr` appears as a dependency in your Hubot `package.json` file.
@@ -35,7 +33,8 @@ Confirm that `hubot-flubr` appears as a dependency in your Hubot `package.json` 
 }
 ```
 
-To enable the script, add the `hubot-flubr` entry to the `external-scripts.json` file (you may need to create this file).
-```
-  ["hubot-flubr"]
+To enable the script, add the `hubot-flubr` entry to the `external-scripts.json` file (_you may need to create this file_).
+
+```javascript
+["hubot-garble"]
 ```
